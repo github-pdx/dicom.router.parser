@@ -1,0 +1,77 @@
+# Dicom-File-Format
+
+# Dicom-Meta-Information-Header
+# Used TransferSyntax: Little Endian Explicit
+(0002,0000) UL 198                                      #   4, 1 FileMetaInformationGroupLength
+(0002,0001) OB 01\00                                    #   2, 1 FileMetaInformationVersion
+(0002,0002) UI =SecondaryCaptureImageStorage            #  26, 1 MediaStorageSOPClassUID
+(0002,0003) UI [2.16.124.113543.6004.101.103.20021117.185552.1.002.001] #  54, 1 MediaStorageSOPInstanceUID
+(0002,0010) UI =LittleEndianImplicit                    #  18, 1 TransferSyntaxUID
+(0002,0012) UI [2.16.124.113543.6004.101.103.1]         #  30, 1 ImplementationClassUID
+(0002,0013) SH [TSHOWVER20021111]                       #  16, 1 ImplementationVersionName
+(0002,0016) AE [AAPM_OT_DCF]                            #   4, 1 SourceApplicationEntityTitle
+
+# Dicom-Data-Set
+# Used TransferSyntax: Little Endian Implicit
+(0008,0000) UL 940                                      #   4, 1 GenericGroupLength
+(0008,0008) CS [ORIGINAL]                               #  16, 1 ImageType
+(0008,0012) DA [20021117]                               #   8, 1 InstanceCreationDate
+(0008,0013) TM [185552]                                 #   6, 1 InstanceCreationTime
+(0008,0014) UI [2.16.124.113543.6004.101.103]           #  28, 1 InstanceCreatorUID
+(0008,0016) UI =SecondaryCaptureImageStorage            #  26, 1 SOPClassUID
+(0008,0018) UI [2.16.124.113543.6004.101.103.20021117.185552.1.002.001] #  54, 1 SOPInstanceUID
+(0008,0020) DA [20021117]                               #   8, 1 StudyDate
+(0008,0021) DA [20021117]                               #   8, 1 SeriesDate
+(0008,0022) DA [20021117]                               #   8, 1 AcquisitionDate
+(0008,0023) DA [20021117]                               #   8, 1 ContentDate
+(0008,0030) TM [185552]                                 #   6, 1 StudyTime
+(0008,0031) TM [185552]                                 #   6, 1 SeriesTime
+(0008,0032) TM [185552]                                 #   6, 1 AcquisitionTime
+(0008,0033) TM [185552]                                 #   6, 1 ContentTime
+(0008,0050) SH [20022002]                               #  16, 1 AccessionNumber
+(0008,0060) CS [OT]                                     #   2, 1 Modality
+(0008,0064) CS [WSD]                                    #  16, 1 ConversionType
+(0008,0070) LO [HFHS]                                   #  64, 1 Manufacturer
+(0008,0080) LO [American Association of Physicists in Medicine] #  64, 1 InstitutionName
+(0008,0090) PN [AAPM]                                   #  64, 1 ReferringPhysicianName
+(0008,1010) SH [AAPM]                                   #   8, 1 StationName
+(0008,1030) LO [Multi Purpose 2K]                       #  64, 1 StudyDescription
+(0008,103e) LO [TG18-BR]                                #  64, 1 SeriesDescription
+(0008,1080) LO [NA]                                     #  64, 1 AdmittingDiagnosesDescription
+(0008,1090) LO [TSHOW]                                  #  64, 1 ManufacturerModelName
+(0008,2111) ST [NA]                                     #  64, 1 DerivationDescription
+(0010,0000) UL 314                                      #   4, 1 GenericGroupLength
+(0010,0010) PN [AAPM^Test^Patterns]                     #  64, 1 PatientName
+(0010,0020) LO [TG18-2002]                              #  64, 1 PatientID
+(0010,0030) DA [20020704]                               #   8, 1 PatientBirthDate
+(0010,0040) CS [O]                                      #   2, 1 PatientSex
+(0010,21b0) LT [Images from the 2002 AAPM task group report on display performan] #  64, 1 AdditionalPatientHistory
+(0010,4000) LT [NA]                                     #  64, 1 PatientComments
+(0018,0000) UL 270                                      #   4, 1 GenericGroupLength
+(0018,0015) CS [NA]                                     #  16, 1 BodyPartExamined
+(0018,1012) DA [20021117]                               #   8, 1 DateOfSecondaryCapture
+(0018,1014) TM [185552]                                 #   6, 1 TimeOfSecondaryCapture
+(0018,1016) LO [Henry Ford Health System, Radiology Research] #  64, 1 SecondaryCaptureDeviceManufacturer
+(0018,1023) LO [Image exported from tShow application]  #  64, 1 DigitalImageFormatAcquired
+(0018,1030) LO [Display  Quality Test Protocol]         #  64, 1 ProtocolName
+(0020,0000) UL 220                                      #   4, 1 GenericGroupLength
+(0020,000d) UI [2.16.124.113543.6004.101.103.20021117.185552.1] #  46, 1 StudyInstanceUID
+(0020,000e) UI [2.16.124.113543.6004.101.103.20021117.185552.1.002] #  50, 1 SeriesInstanceUID
+(0020,0010) SH [2K-MULTI]                               #  16, 1 StudyID
+(0020,0011) IS [2]                                      #  12, 1 SeriesNumber
+(0020,0013) IS [1]                                      #  12, 1 InstanceNumber
+(0020,0060) CS [NA]                                     #  16, 1 Laterality
+(0020,1002) IS [1]                                      #  12, 1 ImagesInAcquisition
+(0028,0000) UL 142                                      #   4, 1 GenericGroupLength
+(0028,0002) US 1                                        #   2, 1 SamplesPerPixel
+(0028,0004) CS [MONOCHROME2]                            #  16, 1 PhotometricInterpretation
+(0028,0010) US 2048                                     #   2, 1 Rows
+(0028,0011) US 2048                                     #   2, 1 Columns
+(0028,0100) US 16                                       #   2, 1 BitsAllocated
+(0028,0101) US 12                                       #   2, 1 BitsStored
+(0028,0102) US 11                                       #   2, 1 HighBit
+(0028,0103) US 0                                        #   2, 1 PixelRepresentation
+(0028,1050) DS [2048]                                   #  16, 1 WindowCenter
+(0028,1051) DS [4096]                                   #  16, 1 WindowWidth
+(7fe0,0000) UL 8388616                                  #   4, 1 GenericGroupLength
+(7fe0,0010) OW 0d8e\0d8d\0d8d\0d8d\0d8d\0d8d\0d8d\0d8d\0d8d\0d8d\0d8d\0d8d\0d8d... # 8388608, 1 PixelData

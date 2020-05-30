@@ -1,0 +1,148 @@
+# Dicom-File-Format
+
+# Dicom-Meta-Information-Header
+# Used TransferSyntax: Little Endian Explicit
+(0002,0000) UL 202                                      #   4, 1 FileMetaInformationGroupLength
+(0002,0001) OB 00\01                                    #   2, 1 FileMetaInformationVersion
+(0002,0002) UI =CTImageStorage                          #  26, 1 MediaStorageSOPClassUID
+(0002,0003) UI [1.3.12.2.1107.5.1.4.54751.30000018050408375996800002174] #  56, 1 MediaStorageSOPInstanceUID
+(0002,0010) UI =JPEGLossless:Non-hierarchical-1stOrderPrediction #  22, 1 TransferSyntaxUID
+(0002,0012) UI [1.2.840.113845.1.1]                     #  18, 1 ImplementationClassUID
+(0002,0013) SH [Syn4,4,3,5]                             #  10, 1 ImplementationVersionName
+(0002,0016) AE [AAPM_ED_CT01]                           #   8, 1 SourceApplicationEntityTitle
+
+# Dicom-Data-Set
+# Used TransferSyntax: JPEG Lossless, Non-hierarchical, 1st Order Prediction
+(0008,0005) CS [ISO_IR 100]                             #  10, 1 SpecificCharacterSet
+(0008,0008) CS [ORIGINAL\PRIMARY\AXIAL\CT_SOM5 SEQ]     #  34, 4 ImageType
+(0008,0016) UI =CTImageStorage                          #  26, 1 SOPClassUID
+(0008,0018) UI [1.3.12.2.1107.5.1.4.54751.30000018050408375996800002174] #  56, 1 SOPInstanceUID
+(0008,0020) DA [20180504]                               #   8, 1 StudyDate
+(0008,0021) DA [20180504]                               #   8, 1 SeriesDate
+(0008,0022) DA [20180504]                               #   8, 1 AcquisitionDate
+(0008,0023) DA [20180504]                               #   8, 1 ContentDate
+(0008,0030) TM [144313.0]                               #   8, 1 StudyTime
+(0008,0031) TM [144439.000000]                          #  14, 1 SeriesTime
+(0008,0032) TM [144446.453597]                          #  14, 1 AcquisitionTime
+(0008,0033) TM [144446.453597]                          #  14, 1 ContentTime
+(0008,0050) SH [DCMTK.123456789]                        #  14, 1 AccessionNumber
+(0008,0060) CS [CT]                                     #   2, 1 Modality
+(0008,0070) LO [SIEMENS]                                #   8, 1 Manufacturer
+(0008,0080) LO [Local Hospital]                         #  30, 1 InstitutionName
+(0008,0081) ST [Vancouver, WA]                          #  46, 1 InstitutionAddress
+(0008,0090) PN [Radiologist]                            #  16, 1 ReferringPhysicianName
+(0008,1010) SH [CT_549121]                              #   8, 1 StationName
+(0008,1030) LO [Vascular^CT_BRAIN_PERFUSION (Adult)]    #  36, 1 StudyDescription
+(0008,1032) SQ (Sequence with explicit length #=1)      # 110, 1 ProcedureCodeSequence
+  (fffe,e000) na (Item with explicit length #=3)          # 102, 1 Item
+    (0008,0100) SH [CT_Vascular^CT_BRAIN_PERFUSION (Adult)] #  38, 1 CodeValue
+    (0008,0102) SH [SYN]                                    #   4, 1 CodingSchemeDesignator
+    (0008,0104) LO [Vascular^CT_BRAIN_PERFUSION (Adult)]    #  36, 1 CodeMeaning
+  (fffe,e00d) na (ItemDelimitationItem for re-encoding)   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem for re-encod.) #   0, 0 SequenceDelimitationItem
+(0008,103e) LO [AXIAL HEAD STD]                         #  14, 1 SeriesDescription
+(0008,1070) PN [TEST]                                    #   4, 1 OperatorsName
+(0008,1090) LO [SOMATOM Definition Edge]                 #  12, 1 ManufacturerModelName
+(0008,1140) SQ (Sequence with explicit length #=1)      # 106, 1 ReferencedImageSequence
+  (fffe,e000) na (Item with explicit length #=2)          #  98, 1 Item
+    (0008,1150) UI =CTImageStorage                          #  26, 1 ReferencedSOPClassUID
+    (0008,1155) UI [1.3.12.2.1107.5.1.4.54751.30000018050408375996800002133] #  56, 1 ReferencedSOPInstanceUID
+  (fffe,e00d) na (ItemDelimitationItem for re-encoding)   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem for re-encod.) #   0, 0 SequenceDelimitationItem
+(0008,2112) SQ (Sequence with explicit length #=1)      # 100, 1 SourceImageSequence
+  (fffe,e000) na (Item with explicit length #=2)          #  92, 1 Item
+    (0008,1150) UI [1.3.12.2.1107.5.9.1]                    #  20, 1 ReferencedSOPClassUID
+    (0008,1155) UI [1.3.12.2.1107.5.1.4.54751.30000018050408375996800002172] #  56, 1 ReferencedSOPInstanceUID
+  (fffe,e00d) na (ItemDelimitationItem for re-encoding)   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem for re-encod.) #   0, 0 SequenceDelimitationItem
+(0009,0010) LO [SIEMENS CT VA1 DUMMY]                   #  20, 1 PrivateCreator
+(0010,0010) PN [Test.Perfusion^ New]                    #  20, 1 PatientName
+(0010,0020) LO [MRN.123456789]                          #  14, 1 PatientID
+(0010,0030) DA [20000312]                               #   8, 1 PatientBirthDate
+(0010,0040) CS [O]                                      #   2, 1 PatientSex
+(0010,1010) AS [018Y]                                   #   4, 1 PatientAge
+(0018,0015) CS [HEAD]                                   #   4, 1 BodyPartExamined
+(0018,0050) DS [3]                                      #   2, 1 SliceThickness
+(0018,0060) DS [120]                                    #   4, 1 KVP
+(0018,0090) DS [500]                                    #   4, 1 DataCollectionDiameter
+(0018,1000) LO [54751]                                  #   6, 1 DeviceSerialNumber
+(0018,1020) LO [syngo CT 2014A]                         #  14, 1 SoftwareVersions
+(0018,1030) LO [CT_BRAIN_PERFUSION]                     #  18, 1 ProtocolName
+(0018,1100) DS [200]                                    #   4, 1 ReconstructionDiameter
+(0018,1110) DS [1040]                                   #   4, 1 DistanceSourceToDetector
+(0018,1111) DS [570]                                    #   4, 1 DistanceSourceToPatient
+(0018,1120) DS [0]                                      #   2, 1 GantryDetectorTilt
+(0018,1130) DS [100]                                    #   4, 1 TableHeight
+(0018,1140) CS [CW]                                     #   2, 1 RotationDirection
+(0018,1150) IS [2000]                                   #   4, 1 ExposureTime
+(0018,1151) IS [225]                                    #   4, 1 XRayTubeCurrent
+(0018,1152) IS [450]                                    #   4, 1 Exposure
+(0018,1160) SH [0]                                      #   2, 1 FilterType
+(0018,1170) IS [27]                                     #   2, 1 GeneratorPower
+(0018,1190) DS [1.2]                                    #   4, 1 FocalSpots
+(0018,1200) DA [20180504]                               #   8, 1 DateOfLastCalibration
+(0018,1201) TM [004132.000000]                          #  14, 1 TimeOfLastCalibration
+(0018,1210) SH [H37s]                                   #   4, 1 ConvolutionKernel
+(0018,5100) CS [HFS]                                    #   4, 1 PatientPosition
+(0018,9306) FD 0.6                                      #   8, 1 SingleCollimationWidth
+(0018,9307) FD 18                                       #   8, 1 TotalCollimationWidth
+(0018,9309) FD 0                                        #   8, 1 TableSpeed
+(0018,9323) CS [NONE]                                   #   4, 1 ExposureModulationType
+(0018,9324) FD 0                                        #   8, 1 EstimatedDoseSaving
+(0018,9345) FD 66.0149999999999864                      #   8, 1 CTDIvol
+(0019,0010) LO [SIEMENS CT VA0  COAD]                   #  20, 1 PrivateCreator
+(0019,1090) DS [0]                                      #   2, 1 Unknown Tag & Data
+(0019,1092) DS [0.9179]                                 #   6, 1 Unknown Tag & Data
+(0019,1093) DS [-0.21]                                  #   6, 1 Unknown Tag & Data
+(0019,1096) IS [0]                                      #   2, 1 Unknown Tag & Data
+(0019,10b1) LO [4.30000018050409424939000000060]        #  32, 1 Unknown Tag & Data
+(0020,000d) UI [1.3.12.2.1107.5.1.4.54751.30000018050409424564000000023] #  56, 1 StudyInstanceUID
+(0020,000e) UI [1.3.12.2.1107.5.1.4.54751.30000018050408375996800002173] #  56, 1 SeriesInstanceUID
+(0020,0010) SH [1]                                      #   2, 1 StudyID
+(0020,0011) IS [2]                                      #   2, 1 SeriesNumber
+(0020,0012) IS [2]                                      #   2, 1 AcquisitionNumber
+(0020,0013) IS [1]                                      #   2, 1 InstanceNumber
+(0020,0032) DS [-99.8046875\-186.8046875\-1105]         #  30, 3 ImagePositionPatient
+(0020,0037) DS [1\0\0\0\1\0]                            #  12, 6 ImageOrientationPatient
+(0020,0052) UI [1.3.12.2.1107.5.1.4.54751.30000018050408375996800002132] #  56, 1 FrameOfReferenceUID
+(0020,1040) LO (no value available)                     #   0, 0 PositionReferenceIndicator
+(0020,1041) DS [-1105]                                  #   6, 1 SliceLocation
+(0020,4000) LT (no value available)                     #   0, 0 ImageComments
+(0021,0010) LO [SIEMENS MED]                            #  12, 1 PrivateCreator
+(0021,1011) DS [0\13]                                   #   4, 2 Unknown Tag & Data
+(0028,0002) US 1                                        #   2, 1 SamplesPerPixel
+(0028,0004) CS [MONOCHROME2]                            #  12, 1 PhotometricInterpretation
+(0028,0010) US 512                                      #   2, 1 Rows
+(0028,0011) US 512                                      #   2, 1 Columns
+(0028,0030) DS [0.390625\0.390625]                      #  18, 2 PixelSpacing
+(0028,0100) US 16                                       #   2, 1 BitsAllocated
+(0028,0101) US 12                                       #   2, 1 BitsStored
+(0028,0102) US 11                                       #   2, 1 HighBit
+(0028,0103) US 0                                        #   2, 1 PixelRepresentation
+(0028,0106) US 0                                        #   2, 1 SmallestImagePixelValue
+(0028,0107) US 3470                                     #   2, 1 LargestImagePixelValue
+(0028,1050) DS [570\700]                                #   8, 2 WindowCenter
+(0028,1051) DS [1314\3200]                              #  10, 2 WindowWidth
+(0028,1052) DS [-1024]                                  #   6, 1 RescaleIntercept
+(0028,1053) DS [1]                                      #   2, 1 RescaleSlope
+(0028,1055) LO [WINDOW1\WINDOW2]                        #  16, 2 WindowCenterWidthExplanation
+(0029,0010) LO [SIEMENS CSA HEADER]                     #  18, 1 PrivateCreator
+(0029,0011) LO [SIEMENS MEDCOM HEADER]                  #  22, 1 PrivateCreator
+(0029,1008) CS [SOM 5]                                  #   6, 1 Unknown Tag & Data
+(0029,1009) LO [VA10A 971201]                           #  12, 1 Unknown Tag & Data
+(0029,1010) OB 00\00\04\00\4c\54\08\00\36\00\33\00\36\00\33\00\00\00\05\00\46\44... # 616, 1 Unknown Tag & Data
+(0029,1140) SQ (Sequence with explicit length #=1)      # 128, 1 Unknown Tag & Data
+  (fffe,e000) na (Item with explicit length #=5)          # 120, 1 Item
+    (0029,0010) LO [SIEMENS MEDCOM HEADER]                  #  22, 1 PrivateCreator
+    (0029,1041) CS [SOM 5 TPOS]                             #  10, 1 Unknown Tag & Data
+    (0029,1042) LO [SOM 5 NULLPOSITION]                     #  18, 1 Unknown Tag & Data
+    (0029,1043) LO [VB10A 20030626]                         #  14, 1 Unknown Tag & Data
+    (0029,1044) OB 2d\30\30\30\30\30\30\32\32\35\00\41      #  12, 1 Unknown Tag & Data
+  (fffe,e00d) na (ItemDelimitationItem for re-encoding)   #   0, 0 ItemDelimitationItem
+(fffe,e0dd) na (SequenceDelimitationItem for re-encod.) #   0, 0 SequenceDelimitationItem
+(0032,1033) LO [SWMC]                                   #   4, 1 RequestingService
+(0032,1060) LO [Vascular CT_BRAIN_PERFUSION (Adult)]    #  36, 1 RequestedProcedureDescription
+(7fe0,0010) OB (PixelSequence #=2)                      # u/l, 1 PixelData
+  (fffe,e000) pi 00\00\00\00                              #   4, 1 Item
+  (fffe,e000) pi ff\d8\ff\c4\00\1f\00\00\03\00\02\03\01\01\01\01\00\00\00\00\00\00... # 140852, 1 Item
+(fffe,e0dd) na (SequenceDelimitationItem)               #   0, 0 SequenceDelimitationItem

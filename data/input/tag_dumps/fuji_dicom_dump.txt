@@ -1,0 +1,144 @@
+   ---------------------------------------------------------------------------------------------
+   Grp  Elmt | Description                                                  | VR |    VM | Value
+   ---------------------------------------------------------------------------------------------
+   0002 0001 | fileMetaInformationVersion                                   | OB |     2 | 0x00, 0x01
+   0002 0002 | mediaStoredSopClassUid                                       | UI |     1 | "1.2.840.10008.5.1.4.1.1.2"
+   0002 0003 | mediaStoredSopInstanceUid                                    | UI |     1 | "1.3.12.2.1107.5.1.4.54751.30000018050408375996800002174"
+   0002 0010 | transferSyntaxUid                                            | UI |     1 | "1.2.840.10008.1.2.4.70"
+   0002 0012 | implementationClassUid                                       | UI |     1 | "1.2.840.113845.1.1"
+   0002 0013 | implementationVersionName                                    | SH |     1 | "Syn4,4,3,5"
+   0002 0016 | sourceApplicationEntityTitle                                 | AE |     1 | "AAPM_ED_CT02"
+   0002 0100 | privateInformationCreatorUid                                 | UI |     1 | ""
+   0002 0102 | privateInformation                                           | OB |     0 | 0x00
+   0008 0005 | specificCharacterSet                                         | CS |     1 | "ISO_IR 100"
+   0008 0008 | imageType                                                    | CS |     4 | "ORIGINAL", "PRIMARY", "AXIAL", "CT_SOM5 SEQ"
+   0008 0016 | sopClassUid                                                  | UI |     1 | "1.2.840.10008.5.1.4.1.1.2"
+   0008 0018 | sopInstanceUid                                               | UI |     1 | "1.3.12.2.1107.5.1.4.54751.30000018050408375996800002174"
+   0008 0020 | studyDate                                                    | DA |     1 | "20180504"
+   0008 0021 | seriesDate                                                   | DA |     1 | "20180504"
+   0008 0022 | acquisitionDate                                              | DA |     1 | "20180504"
+   0008 0023 | contentDate                                                  | DA |     1 | "20180504"
+   0008 0030 | studyTime                                                    | TM |     1 | "144313.0"
+   0008 0031 | seriesTime                                                   | TM |     1 | "144439.000000"
+   0008 0032 | acquisitionTime                                              | TM |     1 | "144446.453597"
+   0008 0033 | contentTime                                                  | TM |     1 | "144446.453597"
+   0008 0050 | accessionNumber                                              | SH |     1 | "FUJI.987654321"
+   0008 0060 | modality                                                     | CS |     1 | "CT"
+   0008 0070 | manufacturer                                                 | LO |     1 | "SIEMENS"
+   0008 0080 | institutionName                                              | LO |     1 | "Local Hospital"
+   0008 0081 | institutionAddress                                           | ST |     1 | "Vancouver, WA"
+   0008 0090 | referringPhysicianName                                       | PN |     1 | "Radiologist"
+   0008 1010 | stationName                                                  | SH |     1 | "CT_644132"
+   0008 1030 | studyDescription                                             | LO |     1 | "Vascular^CT_BRAIN_PERFUSION (Adult)"
+   0008 1032 | procedureCodeSequence                                        | SQ |     1 | 
+         **** Item
+         0008 0100 | codeValue                                                    | SH |     1 | "CT_Vascular^CT_BRAIN_PERFUSION (Adult)"
+         0008 0102 | codingSchemeDesignator                                       | SH |     1 | "SYN"
+         0008 0104 | codeMeaning                                                  | LO |     1 | "Vascular^CT_BRAIN_PERFUSION (Adult)"
+         ---- End Item
+   ---- End Seq
+   0008 103e | seriesDescription                                            | LO |     1 | "AXIAL HEAD STD"
+   0008 1070 | operatorName                                                 | PN |     1 | "TEST"
+   0008 1090 | manufacturerModelName                                        | LO |     1 | "SOMATOM Definition AS"
+   0008 1140 | referencedImageSequence                                      | SQ |     1 | 
+         **** Item
+         0008 1150 | referencedSopClassUid                                        | UI |     1 | "1.2.840.10008.5.1.4.1.1.2"
+         0008 1155 | referencedSopInstanceUid                                     | UI |     1 | "1.3.12.2.1107.5.1.4.54751.30000018050408375996800002133"
+         ---- End Item
+   ---- End Seq
+   0008 2112 | sourceImageSequence                                          | SQ |     1 | 
+         **** Item
+         0008 1150 | referencedSopClassUid                                        | UI |     1 | "1.3.12.2.1107.5.9.1"
+         0008 1155 | referencedSopInstanceUid                                     | UI |     1 | "1.3.12.2.1107.5.1.4.54751.30000018050408375996800002172"
+         ---- End Item
+   ---- End Seq
+   0009 0010 | privateCreatorId                                             | LO |     1 | "SIEMENS CT VA1 DUMMY"
+   0010 0010 | patientName                                                  | PN |     1 | "Test.Perfusion^ New"
+   0010 0020 | patientId                                                    | LO |     1 | "MRN.987654321"
+   0010 0030 | patientBirthDate                                             | DA |     1 | "20000312"
+   0010 0040 | patientSex                                                   | CS |     1 | "O"
+   0010 1010 | patientAge                                                   | AS |     1 | "018Y"
+   0018 0015 | bodyPartExamined                                             | CS |     1 | "HEAD"
+   0018 0050 | sliceThickness                                               | DS |     1 | "3"
+   0018 0060 | kvp                                                          | DS |     1 | "120"
+   0018 0090 | dataCollectionDiameter                                       | DS |     1 | "500"
+   0018 1000 | deviceSerialNumber                                           | LO |     1 | "54751"
+   0018 1020 | softwareVersion                                              | LO |     1 | "syngo CT 2014A"
+   0018 1030 | protocolName                                                 | LO |     1 | "CT_BRAIN_PERFUSION"
+   0018 1100 | reconstructionDiameter                                       | DS |     1 | "200"
+   0018 1110 | distanceSourceToDetector                                     | DS |     1 | "1040"
+   0018 1111 | distanceSourceToPatient                                      | DS |     1 | "570"
+   0018 1120 | gantryDetectorTilt                                           | DS |     1 | "0"
+   0018 1130 | tableHeight                                                  | DS |     1 | "100"
+   0018 1140 | rotationDirection                                            | CS |     1 | "CW"
+   0018 1150 | exposureTime                                                 | IS |     1 | "2000"
+   0018 1151 | xrayTubeCurrent                                              | IS |     1 | "225"
+   0018 1152 | exposure                                                     | IS |     1 | "450"
+   0018 1160 | filterType                                                   | SH |     1 | "0"
+   0018 1170 | generatorPower                                               | IS |     1 | "27"
+   0018 1190 | focalSpot                                                    | DS |     1 | "1.2"
+   0018 1200 | dateOfLastCalibration                                        | DA |     1 | "20180504"
+   0018 1201 | timeOfLastCalibration                                        | TM |     1 | "004132.000000"
+   0018 1210 | convolutionKernel                                            | SH |     1 | "H37s"
+   0018 5100 | patientPosition                                              | CS |     1 | "HFS"
+   0018 9306 | singleCollimationWidth                                       | FD |     1 | 0.6
+   0018 9307 | totalCollimationWidth                                        | FD |     1 | 18
+   0018 9309 | tableSpeed                                                   | FD |     1 | 0.0
+   0018 9323 | exposureModulationType                                       | CS |     1 | "NONE"
+   0018 9324 | estimatedDoseSaving                                          | FD |     1 | 0.0
+   0018 9345 | ctdiVol                                                      | FD |     1 | 66.015
+   0019 0010 | privateCreatorId                                             | LO |     1 | "SIEMENS CT VA0  COAD"
+   0019 1090 | 1090                                                         | DS |     1 | "0"
+   0019 1092 | 1092                                                         | DS |     1 | "0.9179"
+   0019 1093 | 1093                                                         | DS |     1 | "-0.21"
+   0019 1096 | 1096                                                         | IS |     1 | "0"
+   0019 10b1 | 10b1                                                         | LO |     1 | "4.30000018050409424939000000060"
+   0020 000d | studyInstanceUid                                             | UI |     1 | "1.3.12.2.1107.5.1.4.54751.30000018050409424564000000023"
+   0020 000e | seriesInstanceUid                                            | UI |     1 | "1.3.12.2.1107.5.1.4.54751.30000018050408375996800002173"
+   0020 0010 | studyId                                                      | SH |     1 | "1"
+   0020 0011 | seriesNumber                                                 | IS |     1 | "2"
+   0020 0012 | acquisitionNumber                                            | IS |     1 | "2"
+   0020 0013 | instanceNumber                                               | IS |     1 | "1"
+   0020 0032 | imagePosition                                                | DS |     3 | "-99.8046875", "-186.8046875", "-1105"
+   0020 0037 | imageOrientation                                             | DS |     6 | "1", "0", "0", "0", "1", "0"
+   0020 0052 | frameOfReferenceUid                                          | UI |     1 | "1.3.12.2.1107.5.1.4.54751.30000018050408375996800002132"
+   0020 1040 | positionReferenceIndicator                                   | LO |     0 | ""
+   0020 1041 | sliceLocation                                                | DS |     1 | "-1105"
+   0020 4000 | imageComment                                                 | LT |     0 | ""
+   0021 0010 | privateCreatorId                                             | LO |     1 | "SIEMENS MED"
+   0021 1011 | 1011                                                         | DS |     2 | "0", "13"
+   0028 0002 | samplesPerPixel                                              | US |     1 | 1
+   0028 0004 | photometricInterpretation                                    | CS |     1 | "MONOCHROME2"
+   0028 0010 | rows                                                         | US |     1 | 512
+   0028 0011 | columns                                                      | US |     1 | 512
+   0028 0030 | pixelSpacing                                                 | DS |     2 | "0.390625", "0.390625"
+   0028 0100 | bitsAllocated                                                | US |     1 | 16
+   0028 0101 | bitsStored                                                   | US |     1 | 12
+   0028 0102 | highBit                                                      | US |     1 | 11
+   0028 0103 | pixelRepresentation                                          | US |     1 | 0
+   0028 0106 | smallestImagePixelValue                                      | US |     1 | 0
+   0028 0107 | largestImagePixelValue                                       | US |     1 | 3470
+   0028 1050 | windowCenter                                                 | DS |     2 | "570", "700"
+   0028 1051 | windowWidth                                                  | DS |     2 | "1314", "3200"
+   0028 1052 | rescaleIntercept                                             | DS |     1 | "-1024"
+   0028 1053 | rescaleSlope                                                 | DS |     1 | "1"
+   0028 1055 | windowCenterAndWidthExplanation                              | LO |     2 | "WINDOW1", "WINDOW2"
+   0029 0010 | privateCreatorId                                             | LO |     1 | "SIEMENS CSA HEADER"
+   0029 0011 | privateCreatorId                                             | LO |     1 | "SIEMENS MEDCOM HEADER"
+   0029 1008 | 1008                                                         | CS |     1 | "SOM 5"
+   0029 1009 | 1009                                                         | LO |     1 | "VA10A 971201"
+   0029 1010 | 1010                                                         | OB |   616 | 0x00, 0x00, 0x04, 0x00, 0x4C, 0x54, 0x08, 0x00, 0x36, 0x00, 0x33, 0x00, 0x36, 0x00, 0x33, 0x00, 0x00, 0x00, 0x05, 0x00, 0x46, 0x44, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF6, 0x74, 0x40, 0x00, 0x00, 0x06, 0x00, 0x46, 0x44, 0x08, 0x00, 0xA2, 0xF7, 0x7C, 0x83, 0xE5, 0x9E, 0x12, 0x40, 0x00, 0x00, 0x07, 0x00, 0x53, 0x4C, 0x04, 0x00, 0xBB, 0x03, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x53, 0x4C, 0x04, 0x00, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x53, 0x4C, 0x04, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x53, 0x4C, 0x04, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x13, 0x00, ... ( 516 more values )
+   0029 1140 | 1140                                                         | SQ |     1 | 
+         **** Item
+         0029 0010 | privateCreatorId                                             | LO |     1 | "SIEMENS MEDCOM HEADER"
+         0029 1041 | 1041                                                         | CS |     1 | "SOM 5 TPOS"
+         0029 1042 | 1042                                                         | LO |     1 | "SOM 5 NULLPOSITION"
+         0029 1043 | 1043                                                         | LO |     1 | "VB10A 20030626"
+         0029 1044 | 1044                                                         | OB |    12 | 0x2D, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x32, 0x32, 0x35, 0x00, 0x41
+         ---- End Item
+   ---- End Seq
+   0032 1033 | requestingService                                            | LO |     1 | "SWMC"
+   0032 1060 | requestedProcedureDescription                                | LO |     1 | "Vascular CT_BRAIN_PERFUSION (Adult)"
+   7fe0 0000 | groupLength                                                  | UL |     1 | 140872
+   7fe0 0010 | pixelData                                                    | OW |     1 | NOT LOADED
+   ---------------------------------------------------------------------------------------------

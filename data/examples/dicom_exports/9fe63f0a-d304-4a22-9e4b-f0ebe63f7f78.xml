@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<file-format>
+<meta-header xfer="1.2.840.10008.1.2.1" name="Little Endian Explicit">
+<element tag="0002,0000" vr="UL" vm="1" len="4" name="FileMetaInformationGroupLength">240</element>
+<element tag="0002,0001" vr="OB" vm="1" len="2" name="FileMetaInformationVersion" binary="hidden"></element>
+<element tag="0002,0002" vr="UI" vm="1" len="26" name="MediaStorageSOPClassUID">1.2.840.10008.5.1.4.1.1.7</element>
+<element tag="0002,0003" vr="UI" vm="1" len="54" name="MediaStorageSOPInstanceUID">2.16.124.113543.6004.101.103.20021117.190619.1.001.001</element>
+<element tag="0002,0010" vr="UI" vm="1" len="18" name="TransferSyntaxUID">1.2.840.10008.1.2</element>
+<element tag="0002,0012" vr="UI" vm="1" len="28" name="ImplementationClassUID">1.2.840.114089.1.0.0.3.3.60</element>
+<element tag="0002,0013" vr="SH" vm="1" len="12" name="ImplementationVersionName">DCF 3.3.60c</element>
+<element tag="0002,0016" vr="AE" vm="1" len="4" name="SourceApplicationEntityTitle">DCF</element>
+<element tag="0002,0017" vr="AE" vm="1" len="12" name="SendingApplicationEntityTitle">CDImportSCU</element>
+<element tag="0002,0018" vr="AE" vm="1" len="8" name="ReceivingApplicationEntityTitle">TEST_RTR</element>
+</meta-header>
+<data-set xfer="1.2.840.10008.1.2" name="Little Endian Implicit">
+<element tag="0008,0000" vr="UL" vm="1" len="4" name="GenericGroupLength">488</element>
+<element tag="0008,0008" vr="CS" vm="1" len="8" name="ImageType">ORIGINAL</element>
+<element tag="0008,0012" vr="DA" vm="1" len="8" name="InstanceCreationDate">20021117</element>
+<element tag="0008,0013" vr="TM" vm="1" len="6" name="InstanceCreationTime">190619</element>
+<element tag="0008,0014" vr="UI" vm="1" len="28" name="InstanceCreatorUID">2.16.124.113543.6004.101.103</element>
+<element tag="0008,0016" vr="UI" vm="1" len="26" name="SOPClassUID">1.2.840.10008.5.1.4.1.1.7</element>
+<element tag="0008,0018" vr="UI" vm="1" len="54" name="SOPInstanceUID">2.16.124.113543.6004.101.103.20021117.190619.1.001.001</element>
+<element tag="0008,0020" vr="DA" vm="1" len="8" name="StudyDate">20021117</element>
+<element tag="0008,0021" vr="DA" vm="1" len="8" name="SeriesDate">20021117</element>
+<element tag="0008,0022" vr="DA" vm="1" len="8" name="AcquisitionDate">20021117</element>
+<element tag="0008,0023" vr="DA" vm="1" len="8" name="ContentDate">20021117</element>
+<element tag="0008,0030" vr="TM" vm="1" len="6" name="StudyTime">190619</element>
+<element tag="0008,0031" vr="TM" vm="1" len="6" name="SeriesTime">190619</element>
+<element tag="0008,0032" vr="TM" vm="1" len="6" name="AcquisitionTime">190619</element>
+<element tag="0008,0033" vr="TM" vm="1" len="6" name="ContentTime">190619</element>
+<element tag="0008,0050" vr="SH" vm="1" len="8" name="AccessionNumber">20022002</element>
+<element tag="0008,0060" vr="CS" vm="1" len="2" name="Modality">OT</element>
+<element tag="0008,0064" vr="CS" vm="1" len="4" name="ConversionType">WSD</element>
+<element tag="0008,0070" vr="LO" vm="1" len="4" name="Manufacturer">HFHS</element>
+<element tag="0008,0080" vr="LO" vm="1" len="46" name="InstitutionName">American Association of Physicists in Medicine</element>
+<element tag="0008,0090" vr="PN" vm="1" len="4" name="ReferringPhysicianName">AAPM</element>
+<element tag="0008,1030" vr="LO" vm="1" len="16" name="StudyDescription">Multi Purpose 1K</element>
+<element tag="0008,103e" vr="LO" vm="1" len="8" name="SeriesDescription">TG18-QC</element>
+<element tag="0008,1080" vr="LO" vm="1" len="2" name="AdmittingDiagnosesDescription">NA</element>
+<element tag="0008,1090" vr="LO" vm="1" len="6" name="ManufacturerModelName">TSHOW</element>
+<element tag="0008,2111" vr="ST" vm="1" len="2" name="DerivationDescription">NA</element>
+<element tag="0010,0000" vr="UL" vm="1" len="4" name="GenericGroupLength">152</element>
+<element tag="0010,0010" vr="PN" vm="1" len="18" name="PatientName">AAPM^Test^Patterns</element>
+<element tag="0010,0020" vr="LO" vm="1" len="10" name="PatientID">TG18-2002</element>
+<element tag="0010,0030" vr="DA" vm="1" len="8" name="PatientBirthDate">20020704</element>
+<element tag="0010,0040" vr="CS" vm="1" len="2" name="PatientSex">O</element>
+<element tag="0010,21b0" vr="LT" vm="1" len="64" name="AdditionalPatientHistory">Images from the 2002 AAPM task group report on display performan</element>
+<element tag="0010,4000" vr="LT" vm="1" len="2" name="PatientComments">NA</element>
+<element tag="0018,0000" vr="UL" vm="1" len="4" name="GenericGroupLength">176</element>
+<element tag="0018,0015" vr="CS" vm="1" len="2" name="BodyPartExamined">NA</element>
+<element tag="0018,1012" vr="DA" vm="1" len="8" name="DateOfSecondaryCapture">20021117</element>
+<element tag="0018,1014" vr="TM" vm="1" len="6" name="TimeOfSecondaryCapture">190619</element>
+<element tag="0018,1016" vr="LO" vm="1" len="44" name="SecondaryCaptureDeviceManufacturer">Henry Ford Health System, Radiology Research</element>
+<element tag="0018,1023" vr="LO" vm="1" len="38" name="DigitalImageFormatAcquired">Image exported from tShow application</element>
+<element tag="0018,1030" vr="LO" vm="1" len="30" name="ProtocolName">Display  Quality Test Protocol</element>
+<element tag="0020,0000" vr="UL" vm="1" len="4" name="GenericGroupLength">168</element>
+<element tag="0020,000d" vr="UI" vm="1" len="46" name="StudyInstanceUID">2.16.124.113543.6004.101.103.20021117.190619.1</element>
+<element tag="0020,000e" vr="UI" vm="1" len="50" name="SeriesInstanceUID">2.16.124.113543.6004.101.103.20021117.190619.1.001</element>
+<element tag="0020,0010" vr="SH" vm="1" len="8" name="StudyID">1K-MULTI</element>
+<element tag="0020,0011" vr="IS" vm="1" len="2" name="SeriesNumber">1</element>
+<element tag="0020,0013" vr="IS" vm="1" len="2" name="InstanceNumber">1</element>
+<element tag="0020,0060" vr="CS" vm="1" len="2" name="Laterality">NA</element>
+<element tag="0020,1002" vr="IS" vm="1" len="2" name="ImagesInAcquisition">1</element>
+<element tag="0028,0000" vr="UL" vm="1" len="4" name="GenericGroupLength">114</element>
+<element tag="0028,0002" vr="US" vm="1" len="2" name="SamplesPerPixel">1</element>
+<element tag="0028,0004" vr="CS" vm="1" len="12" name="PhotometricInterpretation">MONOCHROME2</element>
+<element tag="0028,0010" vr="US" vm="1" len="2" name="Rows">1024</element>
+<element tag="0028,0011" vr="US" vm="1" len="2" name="Columns">1024</element>
+<element tag="0028,0100" vr="US" vm="1" len="2" name="BitsAllocated">16</element>
+<element tag="0028,0101" vr="US" vm="1" len="2" name="BitsStored">12</element>
+<element tag="0028,0102" vr="US" vm="1" len="2" name="HighBit">11</element>
+<element tag="0028,0103" vr="US" vm="1" len="2" name="PixelRepresentation">0</element>
+<element tag="0028,1050" vr="DS" vm="1" len="4" name="WindowCenter">2048</element>
+<element tag="0028,1051" vr="DS" vm="1" len="4" name="WindowWidth">4096</element>
+<element tag="7fe0,0000" vr="UL" vm="1" len="4" name="GenericGroupLength">2097160</element>
+<element tag="7fe0,0010" vr="OW" vm="1" len="2097152" name="PixelData" loaded="no" binary="hidden"></element>
+</data-set>
+</file-format>

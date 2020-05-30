@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.7"
+install:
+  - pip install -r requirements.txt
+  - pip install codecov
+env:
+  - SH=bash
+  - export PYTHONPATH=$PYTHONPATH:$(pwd)
+  - export PYTHONPATH=$PYTHONPATH:$(pwd/dicom_parser)
+services:
+  - mssql_server
+script:
+  - python -m pytest
+branches:
+  only:
+   - master
