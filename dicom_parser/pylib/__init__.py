@@ -1,1 +1,1 @@
-__all__ = ['config', 'dicom_tools']
+__all__ = ['cmd_args', 'config', 'dicom_tools']

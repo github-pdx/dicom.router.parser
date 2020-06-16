@@ -3,8 +3,8 @@
 import json
 import locale
 import os
-import platform as pfm
 import sys
+import platform as pfm
 from urllib.error import HTTPError
 from urllib.error import URLError
 from urllib.request import Request
@@ -13,7 +13,6 @@ import pkg_resources
 
 BASE_DIR, SCRIPT_NAME = os.path.split(os.path.abspath(__file__))
 PARENT_PATH, CURR_DIR = os.path.split(BASE_DIR)
-IS_WINDOWS = sys.platform.startswith('win')
 DEBUG = False
 VERBOSE = False
 DEMO_ENABLED = True
@@ -23,7 +22,7 @@ __author__ = "github.pdx"
 __email__ = "github.pdx@runbox.com"
 __status__ = "demo"
 __license__ = "MIT"
-__version__ = "1.4.9"
+__version__ = "1.5.0"
 
 __all__ = ['show_packages', 'get_login', 'get_isp_info', 'show_header']
 

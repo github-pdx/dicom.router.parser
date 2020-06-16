@@ -22,7 +22,7 @@ class TestDicomTools(unittest.TestCase):
                                        'tag_dumps', 'fuji_dicom_dump.txt')
 
     def test_build_dcmtk_tag_dict(self):
-        dcmtk_tag_dict = dicom_tools.build_dcmtk_tag_dict(self.valid_dcmtk)
+        dcmtk_tag_dict = dicom_tools.build_dcmtk_tag_dict()
         # match: (0008,0050)
         for key, tag in dcmtk_tag_dict.items():
             if 'filename' not in key:
@@ -32,7 +32,7 @@ class TestDicomTools(unittest.TestCase):
                 self.assertEqual(tag[match.start():match.end()], tag)
 
     def test_build_fuji_tag_dict(self):
-        fuji_tag_dict = dicom_tools.build_fuji_tag_dict(self.valid_fuji)
+        fuji_tag_dict = dicom_tools.build_fuji_tag_dict()
         # match: 0008 0050
         for key, tag in fuji_tag_dict.items():
             if 'filename' not in key:

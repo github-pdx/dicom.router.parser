@@ -29,21 +29,31 @@ IMG_RTR_MM-YYYY_REPORTs (Excel workbook)
 ```
 
 ## Example Output:
-![Screenshot](https://github.com/github-pdx/dicom.router.parser/blob/master/img/excel_export.png)
+![Screenshot](https://github.com/github-pdx/dicom.router.parser/blob/master/img/excel_export_router.png)
 * [Compass Router MS SQL Server Excel Report](https://github.com/github-pdx/dicom.router.parser/blob/master/data/examples/IMG_RTR_Transfers_06-09-19.xlsx)
 * [DICOM '.txt' Tag Dump](https://github.com/github-pdx/dicom.router.parser/blob/master/data/examples/dicom_exports/9fe63f0a-d304-4a22-9e4b-f0ebe63f7f78.txt)
 * [DICOM '.xml' Tag Dump](https://github.com/github-pdx/dicom.router.parser/blob/master/data/examples/dicom_exports/9fe63f0a-d304-4a22-9e4b-f0ebe63f7f78.xml)
-* [DICOM tag-based Excel Report](https://github.com/github-pdx/dicom.router.parser/blob/master/data/output/~dicom_tag_dumps.xlsx)
 * [SQL query](https://github.com/github-pdx/dicom.router.parser/blob/master/sql/select_query.sql)
 
 
-## *DICOM Library* Resources:
+### Example Dump Output:
+![Screenshot](https://github.com/github-pdx/dicom.router.parser/blob/master/img/excel_report_txt_dump.png)
+* [Excel Report (textfile dumps)](https://github.com/github-pdx/dicom.router.parser/blob/master/data/output/~dicom_textfile_dumps.xlsx)
+
+
+### Example DICOM tag Output:
+![Screenshot](https://github.com/github-pdx/dicom.router.parser/blob/master/img/excel_report_dicom.png)
+* [Excel Report - DICOM Tag](https://github.com/github-pdx/dicom.router.parser/blob/master/data/output/~dicom_dicom_tags.xlsx)
+
+
+## *DICOM* Resources:
 * [Compass Router](http://www.laurelbridge.com/pdf/Compass-User-Manual.pdf)
 * [LaurelBride DCF SDK](http://www.laurelbridge.com/products/dcf/)
 * [LaurelBride DCF Examples](http://www.laurelbridge.com/docs/dcf34/ExampleDocs/)
 * [dcm4che](https://dcm4che.atlassian.net/wiki/spaces/lib/overview)
 * [DCMTk](https://dicom.offis.de/dcmtk.php.en#snapshot)
 * [GDCM](https://github.com/malaterre/GDCM)
+* [NiBabel](https://nipy.org/nibabel/)
 
 
 ## *DICOM* Tools:
@@ -55,16 +65,16 @@ IMG_RTR_MM-YYYY_REPORTs (Excel workbook)
 * [MicroDicom Viewer](https://www.microdicom.com/)
 
 
-## Open-source *PACS*:
+## *DICOM* Test Data:
+* [pydicom test datasets](https://github.com/pydicom/pydicom/tree/master/pydicom/data/test_files)
+* [GDCM test datasets](http://gdcm.sourceforge.net/wiki/index.php/Sample_DataSet)
+
+
+### Open-source *PACS*:
 * [Orthanc](https://www.orthanc-server.com/)
 * [SonicDICOM](https://sonicdicom.com/)
 * [OsiriX for Mac](https://www.osirix-viewer.com/resources/pacs/)
 
-
-## **Dependencies:**
-* [PowerShell v4.0+](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
-* [DCMTK 3.6.5-executable binaries](https://github.com/github-pdx/dicom.router.parser/tree/master/dcmtk-3.6.5-win32-dynamic)
-* [Microsoft Visual C++ 2012 Redistributable Package (x64)](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
 
 ## License:
 [MIT License](LICENSE)
