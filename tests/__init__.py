@@ -1,1 +1,1 @@
-__all__ = ['test_dicom_tools', 'test_parse_dicom_tags']
+__all__ = ['test_dicom_tools', 'test_parse_dicom_tags', 'test_parse_dicom_txt_dumps']

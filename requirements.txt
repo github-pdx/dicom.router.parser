@@ -1,8 +1,8 @@
 python-dateutil
 xlsxwriter
-chardet
 flake8
 coverage
 pylint
 pytest
+pathvalidate 
 pydicom
