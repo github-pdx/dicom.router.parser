@@ -27,16 +27,16 @@ def get_dump_type(src_path: pathlib.Path) -> dict:
     type_dict = {'is_dcmtk': False, 'is_fuji': False, 'is_other': True}
     try:
         if isinstance(src_path, pathlib.Path) and src_path.exists():
-            read_file_handle = open(src_path, 'r')
-            lines_list = read_file_handle.readlines(300)
-            # check only first n-lines of input file for unique substring match
-            for line_str in lines_list:
-                if dicom_tools.DCMTK_TAG in line_str:
-                    type_dict['is_dcmtk'] = True
-                if dicom_tools.FUJI_TAG in line_str:
-                    type_dict['is_fuji'] = True
-            if not type_dict['is_dcmtk'] and not type_dict['is_fuji']:
-                type_dict['is_other'] = True
+            with open(src_path, 'r') as read_file_handle:
+                lines_list = read_file_handle.readlines(300)
+                # check only first n-lines of input file for unique substring match
+                for line_str in lines_list:
+                    if dicom_tools.DCMTK_TAG in line_str:
+                        type_dict['is_dcmtk'] = True
+                    if dicom_tools.FUJI_TAG in line_str:
+                        type_dict['is_fuji'] = True
+                if not type_dict['is_dcmtk'] and not type_dict['is_fuji']:
+                    type_dict['is_other'] = True
             read_file_handle.close()
     except (OSError, ValueError):
         show_exception()
@@ -91,30 +91,30 @@ def parse_fuji_tag_dump(src_path: pathlib.Path, file_count: int) -> list:
     parsed_values_list = []
     try:
         if isinstance(src_path, pathlib.Path) and src_path.exists():
-            read_file_handle = open(src_path, 'r')
-            if 'tagdump' not in str(src_path):
-                print(f"   reading_{file_count:03}: {str(src_path)}")
-                lines_list = read_file_handle.readlines()
-                element_dict = dicom_tools.build_fuji_tag_dict()
-                # re-initializes output dict for each file to blank values
-                tag_dict = OrderedDict([(hdr, '')
-                                        for hdr in list(element_dict.keys())])
-                tag_dict['filename'] = src_path.name
-                # using values: tag '(0008,0050)' or '0008 0050'
-                tag_indices = get_tag_indices(list(element_dict.values()),
-                                              lines_list)
-                tag_num = 0
-                for tag_key, tag_value in element_dict.items():
-                    tag_num += 1
-                    line_str = tag_indices[tag_value]
-                    if len(tag_indices) > 0:
-                        # parse value between double quotes "..."
-                        if '"' in line_str:
-                            target_value = \
-                                line_str.split('"', 1)[1].split('"')[0]
-                            tag_dict[tag_key] = target_value
-                for parsed_val in tag_dict.values():
-                    parsed_values_list.append(parsed_val)
+            with open(src_path, 'r') as read_file_handle:
+                if 'tagdump' not in str(src_path):
+                    print(f"   reading_{file_count:03}: {str(src_path)}")
+                    lines_list = read_file_handle.readlines()
+                    element_dict = dicom_tools.build_fuji_tag_dict()
+                    # re-initializes output dict for each file to blank values
+                    tag_dict = OrderedDict([(hdr, '') for hdr in
+                                            list(element_dict.keys())])
+                    tag_dict['filename'] = src_path.name
+                    # using values: tag '(0008,0050)' or '0008 0050'
+                    tag_indices = get_tag_indices(list(element_dict.values()),
+                                                  lines_list)
+                    tag_num = 0
+                    for tag_key, tag_value in element_dict.items():
+                        tag_num += 1
+                        line_str = tag_indices[tag_value]
+                        if len(tag_indices) > 0:
+                            # parse value between double quotes "..."
+                            if '"' in line_str:
+                                target_value = \
+                                    line_str.split('"', 1)[1].split('"')[0]
+                                tag_dict[tag_key] = target_value
+                    for parsed_val in tag_dict.values():
+                        parsed_values_list.append(parsed_val)
             read_file_handle.close()
     except (OSError, ValueError):
         show_exception()
@@ -126,38 +126,39 @@ def parse_dcmtk_tag_dump(src_path: pathlib.Path, file_count: int) -> list:
     parsed_values_list = []
     try:
         if isinstance(src_path, pathlib.Path) and src_path.exists():
-            read_file_handle = open(src_path, 'r')
-            if 'tagdump' not in str(src_path):
-                print(f"   reading_{file_count:03}: {str(src_path)}")
-                lines_list = read_file_handle.readlines()
-                element_dict = dicom_tools.build_dcmtk_tag_dict()
-                # re-initializes output dict for each file to blank values
-                tag_dict = OrderedDict([(hdr, '')
-                                        for hdr in list(element_dict.keys())])
-                tag_dict['filename'] = src_path.name
-                # using values: tag '(0008,0050)' or '0008 0050'
-                tag_indices = get_tag_indices(list(element_dict.values()),
-                                              lines_list)
-                tag_num = 0
-                for tag_key, tag_value in element_dict.items():
-                    tag_num += 1
-                    line_str = tag_indices[tag_value]
-                    if len(tag_indices) > 0:
-                        # parse value between square brackets [..]
-                        if '[' in line_str:
-                            target_value = \
-                                line_str.split('[', 1)[1].split(']')[0]
-                            tag_dict[tag_key] = target_value
-                        elif '=' in line_str:
-                            target_value = \
-                                line_str.split('=', 1)[1].split('#')[0]
-                            tag_dict[tag_key] = target_value.strip()
-                    if config.DEBUG:
-                        print(f"tag_{tag_num:02} {tag_key:24} "
-                              f"\t{tag_value} line: {line_str:40} "
-                              f"len:{len(line_str):02} chars")
-                for parsed_val in tag_dict.values():
-                    parsed_values_list.append(parsed_val)
+            with open(src_path, 'r') as read_file_handle:
+                if 'tagdump' not in str(src_path):
+                    print(f"   reading_{file_count:03}: {str(src_path)}")
+                    lines_list = read_file_handle.readlines()
+                    element_dict = dicom_tools.build_dcmtk_tag_dict()
+                    # re-initializes output dict for each file to blank values
+                    tag_dict = OrderedDict([(hdr, '')
+                                            for hdr in
+                                            list(element_dict.keys())])
+                    tag_dict['filename'] = src_path.name
+                    # using values: tag '(0008,0050)' or '0008 0050'
+                    tag_indices = get_tag_indices(list(element_dict.values()),
+                                                  lines_list)
+                    tag_num = 0
+                    for tag_key, tag_value in element_dict.items():
+                        tag_num += 1
+                        line_str = tag_indices[tag_value]
+                        if len(tag_indices) > 0:
+                            # parse value between square brackets [..]
+                            if '[' in line_str:
+                                target_value = \
+                                    line_str.split('[', 1)[1].split(']')[0]
+                                tag_dict[tag_key] = target_value
+                            elif '=' in line_str:
+                                target_value = \
+                                    line_str.split('=', 1)[1].split('#')[0]
+                                tag_dict[tag_key] = target_value.strip()
+                        if config.DEBUG:
+                            print(f"tag_{tag_num:02} {tag_key:24} "
+                                  f"\t{tag_value} line: {line_str:40} "
+                                  f"len:{len(line_str):02} chars")
+                    for parsed_val in tag_dict.values():
+                        parsed_values_list.append(parsed_val)
             read_file_handle.close()
     except (OSError, ValueError):
         show_exception()

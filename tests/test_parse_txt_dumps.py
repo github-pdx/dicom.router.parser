@@ -67,39 +67,39 @@ class TestDicomParser(unittest.TestCase):
         self.assertTrue(type_dict['is_other'])
 
     def test_get_tag_line_number_fuji(self):
-        read_file_handle = open(self.valid_fuji, 'r')
-        lines_list = read_file_handle.readlines()
-        for tag_keyword in self.fuji_dict.keys():
-            line_num = pt.get_tag_line_number(tag_keyword, lines_list)
-            self.assertEqual(self.fuji_dict[tag_keyword], line_num)
+        with open(self.valid_fuji, 'r') as read_file_handle:
+            lines_list = read_file_handle.readlines()
+            for tag_keyword in self.fuji_dict.keys():
+                line_num = pt.get_tag_line_number(tag_keyword, lines_list)
+                self.assertEqual(self.fuji_dict[tag_keyword], line_num)
         read_file_handle.close()
 
     def test_get_tag_line_number_dcmtk(self):
-        read_file_handle = open(self.valid_dcmtk, 'r')
-        lines_list = read_file_handle.readlines()
-        for tag_keyword in self.dcmtk_dict.keys():
-            line_num = pt.get_tag_line_number(tag_keyword, lines_list)
-            self.assertEqual(self.dcmtk_dict[tag_keyword], line_num)
+        with open(self.valid_dcmtk, 'r') as read_file_handle:
+            lines_list = read_file_handle.readlines()
+            for tag_keyword in self.dcmtk_dict.keys():
+                line_num = pt.get_tag_line_number(tag_keyword, lines_list)
+                self.assertEqual(self.dcmtk_dict[tag_keyword], line_num)
         read_file_handle.close()
 
     def test_get_tag_indices_fuji(self):
-        read_file_handle = open(self.valid_fuji, 'r')
-        lines_list = read_file_handle.readlines()
-        for tag_keyword in self.fuji_dict.keys():
-            line_num = pt.get_tag_line_number(tag_keyword, lines_list)
-            indices_dict = pt.get_tag_indices(self.fuji_dict.keys(),
-                                              lines_list)
-            self.assertEqual(lines_list[line_num], indices_dict[tag_keyword])
+        with open(self.valid_fuji, 'r') as read_file_handle:
+            lines_list = read_file_handle.readlines()
+            for tag_keyword in self.fuji_dict.keys():
+                line_num = pt.get_tag_line_number(tag_keyword, lines_list)
+                indices_dict = pt.get_tag_indices(self.fuji_dict.keys(),
+                                                  lines_list)
+                self.assertEqual(lines_list[line_num], indices_dict[tag_keyword])
         read_file_handle.close()
 
     def test_get_tag_indices_dcmtk(self):
-        read_file_handle = open(self.valid_dcmtk, 'r')
-        lines_list = read_file_handle.readlines()
-        for tag_keyword in self.dcmtk_dict.keys():
-            line_num = pt.get_tag_line_number(tag_keyword, lines_list)
-            indices_dict = pt.get_tag_indices(self.dcmtk_dict.keys(),
-                                              lines_list)
-            self.assertEqual(lines_list[line_num], indices_dict[tag_keyword])
+        with open(self.valid_dcmtk, 'r') as read_file_handle:
+            lines_list = read_file_handle.readlines()
+            for tag_keyword in self.dcmtk_dict.keys():
+                line_num = pt.get_tag_line_number(tag_keyword, lines_list)
+                indices_dict = pt.get_tag_indices(self.dcmtk_dict.keys(),
+                                                  lines_list)
+                self.assertEqual(lines_list[line_num], indices_dict[tag_keyword])
         read_file_handle.close()
 
     def test_get_txt_dump_paths(self):
@@ -111,21 +111,21 @@ class TestDicomParser(unittest.TestCase):
         self.assertGreater(len(dump_path_list), 1)
 
     def test_parse_fuji_tag_dump(self):
-        read_file_handle = open(self.valid_fuji, 'r')
-        lines_list = read_file_handle.readlines(300)
-        tag_list = pt.parse_fuji_tag_dump(self.valid_fuji, 0)
-        self.assertGreater(len(tag_list), 1)
-        self.assertTrue(self.fuji_tag in ''.join(lines_list))
-        self.assertFalse(self.dcmtk_tag in ''.join(lines_list))
+        with open(self.valid_fuji, 'r') as read_file_handle:
+            lines_list = read_file_handle.readlines(300)
+            tag_list = pt.parse_fuji_tag_dump(self.valid_fuji, 0)
+            self.assertGreater(len(tag_list), 1)
+            self.assertTrue(self.fuji_tag in ''.join(lines_list))
+            self.assertFalse(self.dcmtk_tag in ''.join(lines_list))
         read_file_handle.close()
 
     def test_parse_dcmtk_tag_dump(self):
-        read_file_handle = open(self.valid_dcmtk, 'r')
-        lines_list = read_file_handle.readlines(300)
-        tag_list = pt.parse_fuji_tag_dump(self.valid_dcmtk, 0)
-        self.assertGreater(len(tag_list), 1)
-        self.assertTrue(self.dcmtk_tag in ''.join(lines_list))
-        self.assertFalse(self.fuji_tag in ''.join(lines_list))
+        with open(self.valid_dcmtk, 'r') as read_file_handle:
+            lines_list = read_file_handle.readlines(300)
+            tag_list = pt.parse_fuji_tag_dump(self.valid_dcmtk, 0)
+            self.assertGreater(len(tag_list), 1)
+            self.assertTrue(self.dcmtk_tag in ''.join(lines_list))
+            self.assertFalse(self.fuji_tag in ''.join(lines_list))
         read_file_handle.close()
 
     def test_parse_txt_tag_dumps(self):
