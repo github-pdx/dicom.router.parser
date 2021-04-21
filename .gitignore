@@ -1,12 +1,23 @@
-# Custom
+# custom
 desktop.ini
-tests/check_style_coverage.py
+.DS_Store
+.vscode/
+.idea/
+venv/
+dicom_libs/
+setup.py
+data/output/IMG_RTR_*/
 tests/test_code_style
 tests/test_coverage
 tests/~unittest_output
-data/output/IMG_RTR_*/
-docs/
 test_parse_dicom_tags.py
+pep8_errors/
+*check_*
+docs/
+*.lock
+*.log
+*.txt
+
 
 #IDE metadata
 .idea/

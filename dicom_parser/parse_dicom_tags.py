@@ -82,10 +82,8 @@ def read_dicom_extract_tags(src_path: pathlib.Path, file_count: int) -> list:
     return parsed_values_list
 
 
-def main():
+def run_pipeline():
     """Driver to read and parse DICOM tag data from text files."""
-    print(f"{MODULE_NAME} starting...")
-    start = time.perf_counter()
     config.show_header(MODULE_NAME)
     args = cmd_args.get_cmd_args()
     if args.input_path.exists():
@@ -98,9 +96,14 @@ def main():
             print(xls_status)
     else:
         print(f"~!ERROR!~ invalid path: {args.input_path}")
-    end = time.perf_counter() - start
-    print(f"{MODULE_NAME} finished in {end:0.2f} seconds")
+
 
 
 if __name__ == "__main__":
-    main()
+    print(f"{MODULE_NAME} starting...")
+    start = time.perf_counter()
+    
+    run_pipeline()
+    
+    end = time.perf_counter() - start
+    print(f"{MODULE_NAME} finished in {end:0.2f} seconds")

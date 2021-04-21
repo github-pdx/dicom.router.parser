@@ -4,10 +4,10 @@ Then runs a tag dump to extract specific information about each study.
 Note: the largest file size is used to avoid inadvertently parsing presentation states (PR) or stuctured reports (SR).
 Lastly, this script exports desired metadata to .csv/.xlsx, where each row = 1 instance of a DICOM transfer to the PHSWIMG_RTR. 
 #>
-$author = "github.pdx"
+$author = "averille.dev"
 $email = "dicom.pdx@runbox.com"
 $status = "Testing on PHODICOMRTRTST PS v4.0 to v5.1"
-$version = "1.3.7"
+$version = "1.3.8"
 $ps_version = $PSVersionTable.PSVersion
 $script_name = $MyInvocation.MyCommand.Name 
 
@@ -125,7 +125,7 @@ function Print_Bool_State ( [string]$input_title='default_title', [bool]$input_b
 
 $pwd_path = Get-Location
 $pwd_parent_path = Split-Path -Path $pwd_path -Parent
-$dcmtk_path = "$pwd_parent_path\dicom_libs\lib_dcmtk-3.6.5\bin"
+$dcmtk_path = "$pwd_parent_path\dicom_libs\lib_dcmtk-3.6.6\bin"
 $isdcmtkPathValid = is_Path_Valid "dcmtk_path" $dcmtk_path
 
 #$src_parent_path = "D:\ImageRepository"     # on compass router 

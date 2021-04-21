@@ -1,6 +1,6 @@
 # *Compass Imaging Router* DICOM Transfer Reporting
 
-[![Build Status](https://travis-ci.com/github-pdx/dicom_router_parser.svg?branch=master)](https://travis-ci.com/github-pdx/dicom_router_parser)
+[![Build Status](https://travis-ci.com/averille-dev/dicom_router_parser.svg?branch=master)](https://travis-ci.com/averille-dev/dicom_router_parser)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## PowerShell Script (v4.0+) to Parse DICOMs
@@ -21,7 +21,7 @@ $FILTER_PH_AETs = $False
 
 ## Directories:
 ```powershell
-$dcmtk_path = "$pwd_parent_path\dicom_libs\lib_dcmtk-3.6.5\bin"
+$dcmtk_path = "$pwd_parent_path\dicom_libs\lib_dcmtk-3.6.6\bin"
 $src_path = "$pwd_parent_path\data\input\DICOM"
 $dst_path = "$pwd_parent_path\data\output\$base_filename$(Get-Month-Filename)"
 IMG_RTR_MM-YYYY_DICOMs (largest dicom, .xml, .txt tag dumps)
@@ -29,21 +29,21 @@ IMG_RTR_MM-YYYY_REPORTs (Excel workbook)
 ```
 
 ## Example Output:
-![Screenshot](https://github.com/github-pdx/dicom.router.parser/blob/master/img/excel_export_router.png)
-* [Compass Router MS SQL Server Excel Report](https://github.com/github-pdx/dicom.router.parser/blob/master/data/examples/IMG_RTR_Transfers_06-09-19.xlsx)
-* [DICOM '.txt' Tag Dump](https://github.com/github-pdx/dicom.router.parser/blob/master/data/examples/dicom_exports/9fe63f0a-d304-4a22-9e4b-f0ebe63f7f78.txt)
-* [DICOM '.xml' Tag Dump](https://github.com/github-pdx/dicom.router.parser/blob/master/data/examples/dicom_exports/9fe63f0a-d304-4a22-9e4b-f0ebe63f7f78.xml)
-* [SQL query](https://github.com/github-pdx/dicom.router.parser/blob/master/sql/select_query.sql)
+![Screenshot](https://github.com/averille-dev/dicom_router_parser/blob/master/img/excel_export_router.png)
+* [Compass Router MS SQL Server Excel Report](https://github.com/averille-dev/dicom_router_parser/blob/master/data/examples/IMG_RTR_Transfers_06-09-19.xlsx)
+* [DICOM '.txt' Tag Dump](https://github.com/averille-dev/dicom_router_parser/blob/master/data/examples/dicom_exports/9fe63f0a-d304-4a22-9e4b-f0ebe63f7f78.txt)
+* [DICOM '.xml' Tag Dump](https://github.com/averille-dev/dicom_router_parser/blob/master/data/examples/dicom_exports/9fe63f0a-d304-4a22-9e4b-f0ebe63f7f78.xml)
+* [SQL query](https://github.com/averille-dev/dicom_router_parser/blob/master/sql/select_query.sql)
 
 
 ### Example Dump Output:
-![Screenshot](https://github.com/github-pdx/dicom.router.parser/blob/master/img/excel_report_txt_dump.png)
-* [Excel Report (textfile dumps)](https://github.com/github-pdx/dicom.router.parser/blob/master/data/output/~dicom_textfile_dumps.xlsx)
+![Screenshot](https://github.com/averille-dev/dicom_router_parser/blob/master/img/excel_report_txt_dump.png)
+* [Excel Report (textfile dumps)](https://github.com/averille-dev/dicom_router_parser/blob/master/data/output/~dicom_textfile_dumps.xlsx)
 
 
 ### Example DICOM tag Output:
-![Screenshot](https://github.com/github-pdx/dicom.router.parser/blob/master/img/excel_report_dicom.png)
-* [Excel Report - DICOM Tag](https://github.com/github-pdx/dicom.router.parser/blob/master/data/output/~dicom_dicom_tags.xlsx)
+![Screenshot](https://github.com/averille-dev/dicom_router_parser/blob/master/img/excel_report_dicom.png)
+* [Excel Report - DICOM Tag](https://github.com/averille-dev/dicom_router_parser/blob/master/data/output/~dicom_dicom_tags.xlsx)
 
 
 ## *DICOM* Resources:
