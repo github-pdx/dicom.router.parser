@@ -4,8 +4,7 @@ desktop.ini
 .vscode/
 .idea/
 venv/
-dicom_libs/
-setup.py
+dicom_libs/*lib_dcmtk*
 data/output/IMG_RTR_*/
 tests/test_code_style
 tests/test_coverage
